@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class Calculator{
+    public static void main(String[] Args){
+        Scanner in=new Scanner(System.in);
+        int result=0;
+       while(true){
+        System.out.println("enter the operator");
+        char ch=in.next().trim().charAt(0);
+        if(ch=='+'|| ch=='-' || ch=='/' || ch=='*'|| ch=='%'){
+            System.out.println("enter two numbers");
+            int a=in.nextInt();
+            int b=in.nextInt();
+             if(ch=='+'){
+                result=a+b;
+             }
+              if(ch=='-'){
+                result=a-b;
+             }
+              if(ch=='*'){
+                result=a*b;
+             }
+              if(ch=='/'){
+                if(b!=0){
+                result=a/b;
+             }
+              }
+              if(ch=='%'){
+                if(b!=0){
+                result=a%b;
+                }
+        }
+        }else if(ch=='x'|| ch=='X'){
+            System.out.println("Thank you!");
+            break;
+        }
+        else{
+            System.out.println("Invalid input");
+        }
+        
+
+        System.out.println("Result="+result);
+        }
+    }
+}
+
+
+
+    
+        
